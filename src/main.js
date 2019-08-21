@@ -2,10 +2,13 @@ import Vue from 'vue'
 import App from './App.vue'
 import router from './routes'
 import iView from 'iview';
+import 'iview/dist/styles/iview.css';
 import './components'
-import './assets/styles/layout.scss'
+import './assets/styles/layout.scss';
+import axios from './service/axios';
 
 Vue.config.productionTip = false;
+Vue.prototype.$axios = axios;
 
 router.beforeEach((to, from, next) => {
   if (to.meta.title) {

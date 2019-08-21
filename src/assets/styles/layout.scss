@@ -1,8 +1,7 @@
 html {
-  font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Helvetica Neue", STHeiti, "Microsoft Yahei", Tahoma, Simsun, sans-serif;
+  //font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Helvetica Neue", STHeiti, "Microsoft Yahei", Tahoma, Simsun, sans-serif;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
-  line-height: 1;
   background-color: #f5f5f5;
   overflow: hidden;
   overflow-y: auto;
@@ -11,14 +10,12 @@ html {
 body {
   padding: 0;
   margin: 0;
-  font-size: .32rem;
-  -webkit-overflow-scrolling: touch;
+  background-color: #fff;
 }
 
 html,
 body,
-#app,
-.home {
+#app{
   width: 100%;
   min-height: 100%;
 }
@@ -40,4 +37,8 @@ table {
 
 ul, li, ol {
   list-style: none outside none;
+}
+
+a{
+  text-decoration: none;
 }

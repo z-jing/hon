@@ -11,19 +11,18 @@ axios.defaults.headers = {
     'X-Requested-With': 'XMLHttpRequest'
 }
 
-let promiseArr = {};
+let cancel, promiseArr = {};
 const CancelToken = axios.CancelToken;
-// Message
+
 /**
  * @description 请求拦截，这里处理了重复请求和超时
  */
 axios.interceptors.request.use(config => {
-    // if(promiseArr[config.url]){
-    //     promiseArr[config.url] = cancel
-    // }else{
-    //     promiseArr[config.url] = cancel
-    // }
-    console.log(config)
+    if(promiseArr[config.url]){
+        promiseArr[config.url] = cancel
+    }else{
+        promiseArr[config.url] = cancel
+    }
     return config;
 }, err => {
     Message.error('连接超时');
