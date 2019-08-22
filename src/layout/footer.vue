@@ -19,6 +19,7 @@
                     </Col>
                 </Row>
             </section>
+            <h3 class="about_us"><router-link to="/aboutUs">關於我們</router-link></h3>
         </div>
         <div class="copyright">
             <span>Copyright © 2019 弘辰動物保健 All Rights Reserved.</span>
@@ -30,7 +31,7 @@
         background-color: $themeColor;
         color: #fff;
     }
-    .footer_logo,.footer_describe {
+    .footer_logo,.footer_describe,.about_us {
         width: 1200px;
         margin: auto;
         padding: 20px 0;
@@ -45,6 +46,13 @@
             width: 1200px;
             display: block;
             margin: auto;
+        }
+    }
+    .about_us{
+        font-size: 16px;
+        a{
+            color: #fff;
+            /*line-height: 100px;*/
         }
     }
 </style>
