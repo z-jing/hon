@@ -23,8 +23,8 @@ const routes = [
         component: () => import('../pages/aboutUs/aboutUs')
     },
     {
-        path: '/drugInformation',
-        name: 'drugInformation',
+        path: '/security/check/:param',
+        name: 'security',
         meta: {
             title: '藥品信息'
         },

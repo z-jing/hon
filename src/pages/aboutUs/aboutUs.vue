@@ -24,34 +24,34 @@
             <span class="text">Company Address</span>
             <p class="content"><Icon type="md-pin" /> 壹中市大安區中庒里南勢 街 89號</p>
         </Row>
-        <div  class="articleBlockStyle02">
-            <div class="Bbox_1c">
-                <div>
-                    <div class="blockTitle">
-                        <span>核心價值</span>
-                        <small>CORE VALUE</small>
-                    </div>
-                    <div class="flex4c">
-                        <div>
-                            <img src="@/assets/images/icon01.png">
-                            <h2>熱情</h2>
-                        </div>
-                        <div>
-                            <img src="@/assets/images/icon02.png">
-                            <h2>關懷</h2>
-                        </div>
-                        <div>
-                            <img src="@/assets/images/icon03.png">
-                            <h2>盡善</h2>
-                        </div>
-                        <div>
-                            <img src="@/assets/images/icon04.png">
-                            <h2>盡美</h2>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+        <!--<div  class="articleBlockStyle02">-->
+            <!--<div class="Bbox_1c">-->
+                <!--<div>-->
+                    <!--<div class="blockTitle">-->
+                        <!--<span>核心價值</span>-->
+                        <!--<small>CORE VALUE</small>-->
+                    <!--</div>-->
+                    <!--<div class="flex4c">-->
+                        <!--<div>-->
+                            <!--<img src="@/assets/images/icon01.png">-->
+                            <!--<h2>熱情</h2>-->
+                        <!--</div>-->
+                        <!--<div>-->
+                            <!--<img src="@/assets/images/icon02.png">-->
+                            <!--<h2>關懷</h2>-->
+                        <!--</div>-->
+                        <!--<div>-->
+                            <!--<img src="@/assets/images/icon03.png">-->
+                            <!--<h2>盡善</h2>-->
+                        <!--</div>-->
+                        <!--<div>-->
+                            <!--<img src="@/assets/images/icon04.png">-->
+                            <!--<h2>盡美</h2>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                <!--</div>-->
+            <!--</div>-->
+        <!--</div>-->
     </div>
 </template>
 <script>

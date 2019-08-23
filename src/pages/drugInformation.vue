@@ -4,7 +4,8 @@
             <span>藥品信息</span>
             <span>Drug information</span>
         </div>
-        <div class="info_div">
+
+        <div class="info_div" v-if="JSON.stringify(info) !=='{}'">
             <h3 class="orange">首次防偽查詢日期 ：{{info.firstTime || '無'}}</h3>
             <!--<p>{{info.firstTime}}</p>-->
             <h2 class="title">【產品名稱】</h2>
@@ -18,6 +19,7 @@
             <h2 class="title">【產品原理】</h2>
             <p>{{info.content || '無'}}</p>
         </div>
+        <div class="info_div" v-else style="font-size: 14px">暫無此商品信息</div>
     </div>
 </template>
 <script>
@@ -27,12 +29,13 @@
         },
         data () {
             return {
-                info: {}
+                info: {},
+                param: this.$route.params.param,
             }
         },
         mounted(){
-            this.$axios.get('/api/hon/security/get/445464171').then(res => {
-                if (res.status === 200 && res.data.success) {
+            this.$axios.get(`/api/hon/security/get/${this.param}`).then(res => {
+                if (res.status === 200 && res.data.success === 'true') {
                     this.info = res.data.data;
                 }
             }).catch(error => {
