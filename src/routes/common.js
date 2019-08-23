@@ -22,5 +22,13 @@ const routes = [
         },
         component: () => import('../pages/aboutUs/aboutUs')
     },
+    {
+        path: '/drugInformation',
+        name: 'drugInformation',
+        meta: {
+            title: '藥品信息'
+        },
+        component: () => import('../pages/drugInformation')
+    },
 ]
 export default routes

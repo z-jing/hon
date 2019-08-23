@@ -14,7 +14,7 @@
                     </Col>
                     <Col span="6" offset="2">
                     <div><Icon type="md-bookmark" /> 台灣弘辰動物藥品有限公司</div>
-                    <div><Icon type="md-pin" /> 壹中市大安區中庒里南勢 街 89號</div>
+                    <div><Icon type="md-pin" /> 臺中市大安區中庒里南勢厝路89號</div>
                     <!--<div><Icon type="md-call" />tel</div>-->
                     </Col>
                 </Row>
@@ -32,7 +32,7 @@
         color: #fff;
     }
     .footer_logo,.footer_describe,.about_us {
-        width: 1200px;
+        width: 85%;
         margin: auto;
         padding: 20px 0;
         font-size: 16px;
@@ -43,7 +43,7 @@
         line-height: 2.5rem;
         color: #fff;
         span {
-            width: 1200px;
+            width: 85%;
             display: block;
             margin: auto;
         }

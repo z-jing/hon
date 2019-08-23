@@ -50,7 +50,7 @@
         background-color: $themeColor;
     }
     .dropdown_lang {
-        width: 1200px;
+        width: 85%;
         margin: auto;
         text-align: right;
         a{
@@ -58,7 +58,7 @@
         }
     }
     .navBar {
-        width: 1200px;
+        width: 85%;
         margin: 10px auto;
     }
     .logo,.about_us{

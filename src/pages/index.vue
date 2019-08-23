@@ -1,20 +1,20 @@
 <template>
     <div class="home">
-        <img width="100%" src="@/assets/images/banner.jpg" alt="">
-        <div class="example_exhibit">
-            <div>
-                <img src="@/assets/images/index-img-1.jpg" alt="">
-                <p>處方.指示用藥</p>
-            </div>
-            <div>
-                <img src="@/assets/images/index-img-2.jpg" alt="">
-                <p>機能食品</p>
-            </div>
-            <div>
-                <img src="@/assets/images/index-img-3.jpg" alt="">
-                <p>醫材.用品</p>
-            </div>
-        </div>
+        <img width="100%" src="@/assets/images/banner.png" alt="">
+        <!--<div class="example_exhibit">-->
+            <!--<div>-->
+                <!--<img src="@/assets/images/index-img-1.jpg" alt="">-->
+                <!--<p>處方.指示用藥</p>-->
+            <!--</div>-->
+            <!--<div>-->
+                <!--<img src="@/assets/images/index-img-2.jpg" alt="">-->
+                <!--<p>機能食品</p>-->
+            <!--</div>-->
+            <!--<div>-->
+                <!--<img src="@/assets/images/index-img-3.jpg" alt="">-->
+                <!--<p>醫材.用品</p>-->
+            <!--</div>-->
+        <!--</div>-->
         <div class="about_us">
             <Row class="about_us_box">
                 <Col span="11">
@@ -42,11 +42,7 @@
             }
         },
         mounted(){
-            this.$axios.get('/api/hon/security/get/445464171').then(value => {
-                console.log('45======', value)
-            }).catch(error => {
-                console.log('47======', error)
-            })
+
         },
         methods: {
 
@@ -55,7 +51,7 @@
 </script>
 <style lang="scss" scoped>
      .example_exhibit,.about_us_box {
-         width: 1200px;
+         width: 85%;
          margin: 25px auto;
      }
     .example_exhibit {
