@@ -7,6 +7,7 @@
 
         <div class="info_div" v-if="JSON.stringify(info) !=='{}'">
             <h3 class="orange">首次防偽查詢日期 ：{{info.firstTime || '無'}}</h3>
+            <h3 class="orange">此商品為正品</h3>
             <!--<p>{{info.firstTime}}</p>-->
             <h2 class="title">【產品名稱】</h2>
             <p>通用名：{{info.alias || '無'}}</p>
@@ -34,7 +35,7 @@
             }
         },
         mounted(){
-            this.$axios.get(`/api/hon/security/get/${this.param}`).then(res => {
+            this.$axios.get(`/hon/security/get/${this.param}`).then(res => {
                 if (res.status === 200 && res.data.success === 'true') {
                     this.info = res.data.data;
                 }
