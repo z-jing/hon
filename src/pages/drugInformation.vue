@@ -27,7 +27,7 @@
                 <h2 class="title">【產品原理】</h2>
                 <p>{{info.content || '無'}}</p>
             </div>
-            <div class="info_div" v-else style="font-size: 14px">暫無此商品信息</div>
+            <div class="info_div" v-else style="font-size: 14px">{{tip}}</div>
         </div>
 
     </div>
@@ -42,24 +42,41 @@
                 info: {},
                 param: this.$route.params.param,
                 loading: false,
+                tip: '暫無此商品信息'
             }
         },
         mounted(){
-            this.loading = true;
-            this.$axios.get(`/hon/security/get/${this.param}`).then(res => {
-                if (res.status === 200 && res.data.success === 'true') {
-                    this.info = res.data.data;
-                } else {
-                    this.$Message.error('請求失敗');
-                }
-                this.loading = false;
-            }).catch(error => {
-                this.loading = false;
-                this.$Message.error(error || '請求失敗');
-            })
+//            let _self = this;
+            window.addEventListener('beforeunload', (event) => {
+                sessionStorage.setItem("isRefresh", true);
+
+                // Cancel the event as stated by the standard.
+                event.preventDefault();
+                // Chrome requires returnValue to be set.
+                event.returnValue = '';
+            });
+
+            if (!sessionStorage.getItem('isRefresh')) {
+                this.init()
+            } else {
+                this.tip = '刷新無效，請再次掃碼查看。'
+            }
         },
         methods: {
-
+            init(){
+                this.loading = true;
+                this.$axios.get(`/api/hon/security/get/${this.param}`).then(res => {
+                    if (res.status === 200 && res.data.success === 'true') {
+                        this.info = res.data.data;
+                    } else {
+                        this.$Message.error('請求失敗');
+                    }
+                    this.loading = false;
+                }).catch(error => {
+                    this.loading = false;
+                    this.$Message.error(error || '請求失敗');
+                })
+            },
         }
     }
 </script>
