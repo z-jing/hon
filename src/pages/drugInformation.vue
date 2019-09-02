@@ -65,7 +65,7 @@
         methods: {
             init(){
                 this.loading = true;
-                this.$axios.get(`/api/hon/security/get/${this.param}`).then(res => {
+                this.$axios.get(`/hon/security/get/${this.param}`).then(res => {
                     if (res.status === 200 && res.data.success === 'true') {
                         this.info = res.data.data;
                     } else {
