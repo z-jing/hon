@@ -46,8 +46,15 @@
             }
         },
         mounted(){
-//            let _self = this;
             window.addEventListener('beforeunload', (event) => {
+                sessionStorage.setItem("isRefresh", true);
+
+                // Cancel the event as stated by the standard.
+                event.preventDefault();
+                // Chrome requires returnValue to be set.
+                event.returnValue = '';
+            });
+            window.addEventListener('pagehide', (event) => {
                 sessionStorage.setItem("isRefresh", true);
 
                 // Cancel the event as stated by the standard.
@@ -65,7 +72,7 @@
         methods: {
             init(){
                 this.loading = true;
-                this.$axios.get(`/hon/security/get/${this.param}`).then(res => {
+                this.$axios.get(`/api/hon/security/get/${this.param}`).then(res => {
                     if (res.status === 200 && res.data.success === 'true') {
                         this.info = res.data.data;
                     } else {
