@@ -10,10 +10,10 @@
         </div>
         <div v-else>
             <div class="info_div" v-if="JSON.stringify(info) !=='{}'">
-                <h3 class="orange" v-if="info.numberVerify > 1"><img src="@/assets/images/warning.jpeg" alt="" style="width: 20px;
-    vertical-align: middle;"> 提醒！该防伪码已被多次查询，谨防假冒！
-                    本次是第{{info.numberVerify || 'n'}}次查询，首次防偽查詢日期 ：{{info.firstTime || '無'}}</h3>
-                <h3 class="orange" v-else>首次防偽查詢日期 ：{{info.firstTime || '無'}}</h3>
+                <h4 class="orange" v-if="info.numberVerify > 1"><img src="@/assets/images/warning.jpeg" alt="" style="width: 20px;
+    vertical-align: middle;margin-bottom: 5px"> 提醒！该防伪码已被多次查询，谨防假冒！<br/>
+                    本次是第{{info.numberVerify || 'n'}}次查询，首次防偽查詢日期 ：{{info.firstTime || '無'}}</h4>
+                <h4 class="orange" v-else>首次防偽查詢日期 ：{{info.firstTime || '無'}}</h4>
                 <h3 class="orange">此商品為正品</h3>
                 <!--<p>{{info.firstTime}}</p>-->
                 <h2 class="title">【產品名稱】</h2>
